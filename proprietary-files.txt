@@ -143,9 +143,7 @@ vendor/lib/libhwdaphal.so
 vendor/lib/libExtendedExtractor.so
 vendor/lib/libFlacSwDec.so
 -vendor/lib/libHevcSwDecoder.so
-vendor/lib/libI420colorconvert.so
 vendor/lib/libmm-abl-oem.so
-vendor/lib/libmm-color-convertor.so
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmmparser.so
