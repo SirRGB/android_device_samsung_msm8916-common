@@ -375,6 +375,9 @@ on fs
     rm "-rf /efs/dmverity"
     restorecon -R /efs
 
+    # Start HW service manager early
+    start hwservicemanager
+
 on late-fs
     # Start services for bootanim
     start hwservicemanager
