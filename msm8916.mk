@@ -17,8 +17,6 @@
 # Inherit from common
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 # Include proprietary blobs
 $(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
 
