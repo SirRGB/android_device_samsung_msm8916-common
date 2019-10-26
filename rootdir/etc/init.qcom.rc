@@ -849,5 +849,3 @@ on late_start
 on property:init.svc.recovery=running
     trigger enable-low-power
 
-on property:apexd.status=ready
-    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
