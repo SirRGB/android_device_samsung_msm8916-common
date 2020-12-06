@@ -55,7 +55,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinyplay \
     tinycap \
-    tinymix \
     tinypcminfo \
     libtinycompress
 
