@@ -115,7 +115,6 @@ TARGET_RECOVERY_DEVICE_MODULES ?= libinit_msm8916
 
 # Kernel
 BOARD_KERNEL_CMDLINE += \
-	console=null \
 	androidboot.hardware=qcom \
 	user_debug=23 \
 	msm_rtb.filter=0x3F \
