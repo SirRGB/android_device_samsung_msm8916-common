@@ -118,7 +118,6 @@ TARGET_HAS_MEMFD_BACKPORT := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE += \
-	console=null \
 	androidboot.hardware=qcom \
 	user_debug=23 \
 	msm_rtb.filter=0x3F \
