@@ -171,9 +171,6 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
-# Power
-TARGET_USES_INTERACTION_BOOST := true
-
 # Radio
 TARGET_USES_OLD_MNC_FORMAT := true
 
