@@ -18,7 +18,7 @@
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
 
 # Include proprietary blobs
-$(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
+$(call inherit-product, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
 
 LOCAL_PATH := device/samsung/msm8916-common
 
