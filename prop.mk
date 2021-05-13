@@ -102,6 +102,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false
 
+# OpenGLES
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196608
+    
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.renderengine.backend=threaded \
