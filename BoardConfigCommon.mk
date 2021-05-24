@@ -242,19 +242,12 @@ endif
 #	RECOVERY_VARIANT := twrp
 #endif
 
-
 # SELinux
-ifeq ($(TARGET_USES_SEPOLICY),true)
-    SELINUX_IGNORE_NEVERALLOWS := false
-    include device/qcom/sepolicy-legacy/sepolicy.mk
-    BOARD_SEPOLICY_DIRS += \
-        $(COMMON_PATH)/sepolicy-tmp/gte
-else
-    SELINUX_IGNORE_NEVERALLOWS := true
-    # include device/qcom/sepolicy-legacy/sepolicy.mk
-    BOARD_SEPOLICY_DIRS += \
-        $(COMMON_PATH)/sepolicy_tmp
-endif
+# include device/qcom/sepolicy-legacy/sepolicy.mk
+
+SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_SEPOLICY_DIRS += \
+    $(COMMON_PATH)/sepolicy_tmp
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
