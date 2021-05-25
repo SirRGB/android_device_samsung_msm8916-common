@@ -244,8 +244,7 @@ endif
 
 
 # SELinux
-ifeq ($(TARGET_USES_SEPOLICY),true)
-    SELINUX_IGNORE_NEVERALLOWS := false
+ifeq ($(CONFIG_GTE_COMMON_SEPOLICY),true)
     include device/qcom/sepolicy-legacy/sepolicy.mk
     BOARD_SEPOLICY_DIRS += \
         $(COMMON_PATH)/sepolicy-tmp/gte
