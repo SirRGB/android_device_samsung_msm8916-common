@@ -101,11 +101,11 @@ TARGET_HW_KEYMASTER_V03 := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 ifeq ($(RECOVERY_VARIANT),twrp)
-	TARGET_HW_DISK_ENCRYPTION := false
-	TARGET_SWV8_DISK_ENCRYPTION := false
+    TARGET_HW_DISK_ENCRYPTION := false
+    TARGET_SWV8_DISK_ENCRYPTION := false
 else
-	TARGET_HW_DISK_ENCRYPTION := true
-	TARGET_SWV8_DISK_ENCRYPTION := true
+    TARGET_HW_DISK_ENCRYPTION := true
+    TARGET_SWV8_DISK_ENCRYPTION := true
 endif
 
 # Filesystems
@@ -133,12 +133,22 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # Kernel
-BOARD_KERNEL_CMDLINE += \
-	androidboot.hardware=qcom \
-	user_debug=23 \
-	msm_rtb.filter=0x3F \
-	ehci-hcd.park=3 \
-	androidboot.bootdevice=7824900.sdhci
+ifeq ($(CONFIG_GTE_COMMON_SEPOLICY),true)    
+    BOARD_KERNEL_CMDLINE += \
+        androidboot.hardware=qcom \
+        user_debug=23 \
+        msm_rtb.filter=0x3F \
+        ehci-hcd.park=3 \
+        androidboot.bootdevice=7824900.sdhci
+else
+    BOARD_KERNEL_CMDLINE += \
+        androidboot.hardware=qcom \
+        user_debug=23 \
+        msm_rtb.filter=0x3F \
+        ehci-hcd.park=3 \
+        androidboot.bootdevice=7824900.sdhci \
+        androidboot.selinux=permissive
+endif
 
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
@@ -242,11 +252,7 @@ endif
 #endif
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
-
-#SELINUX_IGNORE_NEVERALLOWS := true
-BOARD_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy
+include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
