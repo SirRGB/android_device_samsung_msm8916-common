@@ -1,0 +1,2 @@
+#============= mediacodec ==============
+allow mediacodec vfat:dir search;

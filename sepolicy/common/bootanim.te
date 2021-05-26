@@ -1,0 +1,2 @@
+#============= bootanim ==============
+allow bootanim sysfs:file { getattr open read };
