@@ -271,7 +271,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
 
 # Properties
-include $(LOCAL_PATH)/prop.mk
+include $(LOCAL_PATH)/system_prop.mk
 
 # Ramdisk
 PRODUCT_PACKAGES += \
