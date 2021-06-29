@@ -69,6 +69,9 @@ TARGET_USE_VENDOR_CAMERA_EXT := true
 # For legacy HAL1 camera
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# Dedupe VNDK libraries with identical core variants.
+TARGET_VNDK_USE_CORE_VARIANT := true
+
 # Display
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
