@@ -74,6 +74,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.chipname=MSM8939
 endif
 
+# Chipset
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.soc.manufacturer=Qualcomm \
+    ro.soc.model=MSM8916
+
 # Connectivity Engine
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.dpm=0 \
