@@ -197,4 +197,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ZRAM - Size in MB
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.zram.size=128
+    ro.config.zram.enabled=true \
+    ro.config.zram.size=512
