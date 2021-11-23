@@ -383,10 +383,6 @@ on fs
     rm "-rf /efs/dmverity"
     restorecon -R /efs
 
-# fm_radio
-    chmod 0777 /dev/radio0
-    chown system system /dev/radio0
-
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /tombstones/modem 0771 system system
@@ -520,10 +516,6 @@ on post-fs-data
     # Sensor
     mkdir /persist/sensors 0770 system system
 
-    #Create FM dir for patchdownloader
-    mkdir /data/misc/fm 0770 system system
-    chmod 0770 /data/misc/fm
-
     # qti-logkit data
     mkdir /data/misc/qti-logkit/ 0771 system system
     mkdir /data/misc/qti-logkit/shared-privileged/ 2770 system system
@@ -646,13 +638,6 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-# FM enable/disable triggers
-on property:hw.fm.init=1
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
-
-on property:hw.fm.init=0
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
-
 service irsc_util /system/vendor/bin/irsc_util "/vendor/etc/sec_config"
     class main
     user root
@@ -733,13 +718,6 @@ service loc_launcher /system/vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet net_raw diag net_admin wifi
-
-service vendor.fm /system/vendor/bin/init.qcom.fm.sh
-    class late_start
-    user system
-    group system
-    disabled
-    oneshot
 
 service qcom-sh /system/vendor/bin/init.qcom.sh
     class late_start

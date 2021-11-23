@@ -86,18 +86,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.netmgrd.qos.enable=false \
     ro.use_data_netmgrd=false
     
-# FM RADIO
-ifeq ($(TARGET_PROVIDES_FM_RADIO),true)
-    PRODUCT_PACKAGES += \
-        init.qcom.fm.sh \
-        qcom.fmradio \
-        FMRadio
-
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.fm.transmitter=false \
-        media.stagefright.enable-fma2dp=true
-endif
-
 # OpenGLES
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
