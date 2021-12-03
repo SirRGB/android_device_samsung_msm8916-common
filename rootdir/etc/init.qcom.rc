@@ -82,17 +82,9 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
-    # For SEC NFC
-    chmod 0660 /dev/sec-nfc
-    chown nfc nfc /dev/sec-nfc
-
     # Wifi firmware reload path
     chmod 0660 /sys/module/wlan/parameters/fwpath
     chown wifi wifi /sys/module/wlan/parameters/fwpath
-
-    # For PN547 NFC
-    chmod 0660 /dev/pn547
-    chown nfc nfc /dev/pn547
 
     # Touch Disabler permissions
     chown system system /sys/class/touch_key
