@@ -180,7 +180,7 @@ ifeq ($(TARGET_PROVIDES_RIL),true)
         persist.rild.nitz_short_ons_3="" \
         ril.subscription.types=NV,RUIM \
         DEVICE_PROVISIONED=1 \
-        rild.libpath=/system/lib/libsec-ril.so \
+        rild.libpath=/system/lib/libsecril-shim
 endif
 
 # SAMP SPCM
