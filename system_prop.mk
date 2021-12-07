@@ -181,7 +181,6 @@ ifeq ($(TARGET_PROVIDES_RIL),true)
         ril.subscription.types=NV,RUIM \
         DEVICE_PROVISIONED=1 \
         rild.libpath=/system/lib/libsec-ril.so \
-        ro.multisim.set_audio_params=true
 endif
 
 # SAMP SPCM
