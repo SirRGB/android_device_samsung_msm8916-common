@@ -149,39 +149,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
-    
-# RIL
-ifeq ($(TARGET_PROVIDES_RIL),true)
-    # Radio
-    PRODUCT_PACKAGES += \
-        init.carrier.rc \
-        init.link_ril_db.sh \
-        librmnetctl \
-        libshim_secril \
-        libxml2 \
-        macloader
-
-    # Radio
-    PRODUCT_PROPERTY_OVERRIDES += \
-        persist.radio.add_power_save=1 \
-        persist.radio.apm_sim_not_pwdn=1 \
-        persist.radio.sib16_support=1
-
-    # RIL
-    PRODUCT_PROPERTY_OVERRIDES += \
-        persist.rild.nitz_long_ons_0="" \
-        persist.rild.nitz_long_ons_1="" \
-        persist.rild.nitz_long_ons_2="" \
-        persist.rild.nitz_long_ons_3="" \
-        persist.rild.nitz_plmn="" \
-        persist.rild.nitz_short_ons_0="" \
-        persist.rild.nitz_short_ons_1="" \
-        persist.rild.nitz_short_ons_2="" \
-        persist.rild.nitz_short_ons_3="" \
-        ril.subscription.types=NV,RUIM \
-        DEVICE_PROVISIONED=1 \
-        rild.libpath=/system/lib/libsecril-shim
-endif
 
 # SAMP SPCM
 PRODUCT_PROPERTY_OVERRIDES += \
