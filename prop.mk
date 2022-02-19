@@ -179,6 +179,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.config.spcm_db_launcher=true \
     sys.config.spcm_preload_enable=true
 
+# System
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.binary_xml=false
+
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
