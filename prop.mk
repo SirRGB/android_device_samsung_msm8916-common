@@ -94,6 +94,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.renderengine.backend=threaded \
     debug.sf.enable_gl_backpressure=1 \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
