@@ -24,7 +24,6 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 BUILD_BROKEN_DUP_RULES := true
 
 # Architecture/platform
-BOARD_VENDOR := samsung
 FORCE_32_BIT := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv8-a
