@@ -112,8 +112,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8916 \
     libtinyxml \
     libtinyxml2 \
-    memtrack.msm8916 \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom
+    memtrack.msm8916
 
 # DRM
 PRODUCT_PACKAGES += \
