@@ -35,7 +35,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.msm8916 \
