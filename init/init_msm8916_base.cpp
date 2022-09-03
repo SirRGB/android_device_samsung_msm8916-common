@@ -37,7 +37,7 @@ void property_override_dual(char const system_prop[], char const vendor_prop[], 
 	property_override(vendor_prop, value);
 }
 
-/* 
+/*
  * Read the file at filename and returns the integer
  * value in the file.
  *
@@ -132,9 +132,9 @@ void set_common_properties()
 
 	property_override("ro.boot.btmacaddr", "00:00:00:00:00:00");
 
-	/* 
+	/*
 	 * Check for multi-sim devices
-	 * check if the simslot count file exists 
+	 * check if the simslot count file exists
 	 */
 	if (access(SIMSLOT_FILE, F_OK) == 0) {
 		int sim_count = read_integer(SIMSLOT_FILE);

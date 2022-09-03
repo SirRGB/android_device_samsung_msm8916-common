@@ -34,4 +34,3 @@ logi "Setting permissions..."
 chmod 0751 ${NEW_TELEPHONY_DB_DIR}/..
 chmod 0771 ${NEW_TELEPHONY_DB_DIR}
 chown radio:radio ${NEW_TELEPHONY_DB_DIR} -R
-
