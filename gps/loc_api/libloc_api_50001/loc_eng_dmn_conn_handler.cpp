@@ -234,4 +234,3 @@ int loc_eng_dmn_conn_loc_api_server_if_release_handler(struct ctrl_msgbuf *pmsg,
 #endif
     return 0;
 }
-

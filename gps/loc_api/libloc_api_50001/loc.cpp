@@ -1095,4 +1095,3 @@ static void local_ni_cb(GpsNiNotification *notification, bool esEnalbed)
         gps_ni_cb(notification);
     }
 }
-

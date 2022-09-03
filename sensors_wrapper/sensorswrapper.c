@@ -81,7 +81,7 @@ static int sensors_module_open(const struct hw_module_t* module, const char* id,
 		ret = -ENODEV;
 		goto fail;
 	}
-	
+
 	ret = check_vendor_module();
 
 	if (ret) {
@@ -91,7 +91,7 @@ static int sensors_module_open(const struct hw_module_t* module, const char* id,
 	}
 
 	ret = gVendorModule->common.methods->open((const hw_module_t*)gVendorModule, id, (hw_device_t**)&samsung_hw_dev);
-	
+
 	if (ret) {
 		ALOGE("%s couldn't open sensors module in %s. (%s)", __func__,
 				 SENSORS_HARDWARE_MODULE_ID, strerror(-ret));
@@ -121,7 +121,7 @@ static int sensors_module_open(const struct hw_module_t* module, const char* id,
 	dev->flush = wrapper_flush;
 
 	return ret;
-	
+
 	fail:
 	if (samsung_hw_dev) {
 		free(samsung_hw_dev);

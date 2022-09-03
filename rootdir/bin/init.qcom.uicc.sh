@@ -112,4 +112,3 @@ case $action in
     echo "USB_UICC invalid action for uicc operation!"
     ;;
 esac
-

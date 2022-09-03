@@ -26,4 +26,3 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libwcnss_qmi
 
 include $(BUILD_SHARED_LIBRARY)
-
